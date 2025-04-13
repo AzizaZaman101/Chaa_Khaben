@@ -1,0 +1,140 @@
+:root{
+    --header_background: #f0ebd2;
+    --heading: rgba(22, 15, 2, 0.803);
+    --beige_color:  rgb(240, 235, 226);  
+    --brown_shade_light: rgba(195, 129, 22, 0.588);
+    --brown-shade_dark: rgba(198, 131, 8, 0.436);
+    --wave-color : rgba(22, 15, 2, 0.67);
+    --hover: rgba(22, 15, 2, 0.579);
+    --hover_card-btn: rgba(22, 15, 2, 0.84);
+    /*--logo_color:linear-gradient(45deg, #007bff, #ffffff 40%, #007bff);*/
+    --logo_color: rgba(101, 63, 2, 0.712);
+    --logo_font: Li Sirajee Sylheti Unicode;
+
+    --news_box: linear-gradient(
+        rgba(77, 49, 4, 0.095),
+        rgba(82, 52, 6, 0.137),    
+        rgba(207, 157, 76, 0.277));
+    --shadow: 4px 4px 10px rgba(77, 49, 4, 0.3), 
+    6px 6px 15px rgba(207, 157, 76, 0.25);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+main{
+    margin:2rem;
+}
+
+.breadcrumb-nav{
+    padding-bottom: 2rem;
+}
+
+.add-product-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2rem;
+
+    padding-bottom: 8rem;
+}
+
+.add-category-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2rem;
+
+    padding-bottom: 8rem;
+}
+
+
+.category-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    padding: 3rem 0;
+    gap: 3.2rem;
+}
+
+.category{
+    background: var(--news_box);
+    padding: 2rem;
+    border-radius: 30px;
+    width: 14rem;
+
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.category:hover{
+    transform: scale(1.07);
+    background: var(--header_background);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon{
+    display: flex;
+    justify-content: space-between;
+    gap: 9rem;
+}
+ 
+.card-icon #remove-category{
+    font-size: 1.2rem;
+    color: crimson;
+    padding: 0.3rem;
+    border-radius: 3rem;
+}
+
+.card-icon #remove-category:hover{
+    transform:scale(1.5);
+    color: var(--header_background);
+    background: rgba(68, 10, 22, 0.856);
+}
+
+
+.category img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    color: var(--hover);
+    font-weight: bold;
+    margin: 1rem 0;
+} 
+
+
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 2.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+input, select, textarea, button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2.5rem;
+    text-align: center;
+}
+button {
+    background: crimson;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background: rgba(68, 10, 22, 0.856);
+}
+

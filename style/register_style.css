@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+
+:root{
+    --header_background: #f0ebd2;
+
+    --brown-shade_dark: rgba(22, 15, 2, 0.237);
+
+    --input: rgba(225, 176, 96, 0.194);
+    --input_hover: rgba(225, 176, 96, 0.343);
+
+    --input_btn: rgba(195, 148, 73, 0.422);
+    --input_btn_hover: rgba(195, 148, 72, 0.217);
+
+    --shadow: 4px 4px 10px rgba(77, 49, 4, 0.3), 
+    6px 6px 15px rgba(207, 157, 76, 0.25);
+}
+
+.form_container{
+
+    background: url('../images/interface/tea.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 90vh;
+    margin-bottom: 6rem;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
+.form-box{
+    padding: 5rem;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:30rem;
+    height: 80vh;
+    
+    border-radius: 30ox;
+    border: 1px solid var(--header_background);
+    overflow: hidden;
+    z-index: 2;
+    background-color: var(--brown-shade_dark);
+    backdrop-filter: blur(1rem);
+}
+
+
+.write-code-container{
+    position: absolute;
+    left: -105.5rem;
+    width: 29rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.set-new-password-container{
+    position: absolute;
+    left: -157.5rem;
+    width: 29rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.forgot-password-container{
+    position: absolute;
+    left: -52.5rem;
+    width: 29rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container{
+    position: absolute;
+    left: 0.4rem;
+    width: 29rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container{
+    position: absolute;
+    right: -52.5rem;
+    width: 28.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.heading_form{
+    color: var(--header_background);
+    opacity: 80%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.top span{
+    color: var(--header_background);
+    font-size: small;
+    padding: 0.8rem 0;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.top span a{
+    color: var(--header_background);
+    font-weight: 500;
+    margin-left: 0.5rem;
+    text-decoration: underline;
+}
+
+.two-forms{
+    display:flex;
+    gap: 1rem;
+}
+
+.input-field{
+    font-size: 1rem;
+    background: var(--input);
+    color: var(--header_background);
+    height: 3rem;
+    width: 100%;
+    padding: 0 1rem 0 4.5rem;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+.registration-input-field{
+    font-size: 0.8rem;
+    background: var(--input);
+    color: var(--header_background);
+    height: 2rem;
+    width: 100%;
+    padding: 0 1rem 0 4.5rem;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+
+.user_type{
+    color: var(--header_background);
+    font-size: 0.8rem;
+    height: 1rem;
+}
+
+.user_type_box{
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem;
+}
+
+
+.registration-input-field:focus,
+.registration-input-field:hover,
+.input-field:hover,
+.input-field:focus{
+   /* background: rgba(255, 255, 255, 0.25);*/
+
+    background: var(--input_hover);
+}
+
+
+/* Show the eye icon */
+
+.input-field:focus ~ .toggle_password {
+    display: block; 
+}
+.registration-input-field:focus ~ .toggle_password {
+    display: inline-block;
+}
+
+
+::-webkit-input-placeholder{
+    color: var(--header_background);
+}
+
+.input-box i{
+    position:relative;
+    top: -2.3rem;
+    left: 1.7rem;
+    color: var(--header_background);
+}
+
+.register-container .input-box i{
+    top: -1.8rem;
+    left: 1.3rem;
+}
+
+.toggle_password{
+    position:absolute;
+    display:none;
+    top: 74.6%;
+    left: 25rem;
+    color: var(--header_background);
+}
+
+.submit{
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline:none;
+    background: var(--input_btn);
+    cursor: pointer;
+}
+
+.submit:hover{
+    background: var(--input_btn_hover);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.two-col{
+    display: flex;
+    justify-content: space-between;
+    color: var(--header_background);
+    font-size: small;
+    margin-top: 0.2rem;
+}
+
+.two-col .one{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.two label a{
+    text-decoration: none;
+    color: var(--header_background)
+}
+
+.two label a:hover{
+    text-decoration: underline;
+}
