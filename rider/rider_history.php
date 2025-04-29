@@ -5,6 +5,7 @@ session_start();
 
 // Ensure only riders can view this page
 if (!isset($_SESSION['rider_id'])) {
+<<<<<<< HEAD
     header("Location: ../regular/index.php");
     exit();
 }
@@ -15,6 +16,11 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 
+=======
+    die("Error: Unauthorized Access");
+}
+
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 $rider_id = $_SESSION['rider_id'];
  
 // Fetch all pending deliveries assigned to this rider with status 'shipped'
@@ -109,6 +115,9 @@ $result = $stmt->get_result();
 </main>
 
 <?php include'../basic_php/footer.php';?>
+<<<<<<< HEAD
 <?php include '../javascript_files/prevent_access.js'; ?>
+=======
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </body>
 </html>

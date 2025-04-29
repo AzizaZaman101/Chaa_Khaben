@@ -1,6 +1,10 @@
 <?php
 include '../basic_php/connection.php';
+<<<<<<< HEAD
 session_start(); 
+=======
+session_start();
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
 if (!isset($_SESSION['customer_id'])) {
     header("Location: ../regular/index.php");
@@ -12,6 +16,14 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
 
+<<<<<<< HEAD
+=======
+if (!isset($_SESSION['customer_id'])) {
+    echo "Login required";
+    exit; 
+}
+
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 $customer_id = $_SESSION['customer_id'];
 
 $sql = "
@@ -103,6 +115,9 @@ $total = 0;
         }
     });
 </script>
+<<<<<<< HEAD
 <?php include '../javascript_files/prevent_access.js'; ?>
+=======
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </body>
 </html>

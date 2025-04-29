@@ -15,6 +15,10 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
+<<<<<<< HEAD
 header("refresh:2;url= ../regular/index.php");
+=======
+header("Location: ../regular/index.php");
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 exit();
 ?>

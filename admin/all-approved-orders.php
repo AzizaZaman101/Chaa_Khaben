@@ -2,6 +2,7 @@
 include '../basic_php/connection.php';
 session_start();
 
+<<<<<<< HEAD
 // Ensure only admins can view this page
 if (!isset($_SESSION['admin_id'])) {
     header("Location: ../regular/index.php");
@@ -12,6 +13,13 @@ if (!isset($_SESSION['admin_id'])) {
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
+=======
+
+// Ensure only riders can view this page
+if (!isset($_SESSION['admin_id'])) {
+    die("Error: Unauthorized Access");
+}
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
 $admin_id = $_SESSION['admin_id'];
  
@@ -118,6 +126,9 @@ $result = $stmt->get_result();
 </main>
 
 <?php include'../basic_php/footer.php';?>
+<<<<<<< HEAD
 <?php include '../javascript_files/prevent_access.js'; ?>
+=======
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </body>
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php include '../basic_php/connection.php' ;
 
 session_start(); 
@@ -13,6 +14,9 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 ?>
+=======
+<?php include '../basic_php/connection.php' ; ?>
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +56,11 @@ header("Expires: 0");
 <!-- -->
     <script src="../javascript_files/script.js"></script>
 
+<<<<<<< HEAD
     <script src="../javascript_files/prevent_access.js"></script>
 </body>
 </html> 
+=======
+</body>
+</html>
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0

@@ -1,6 +1,7 @@
 <?php
 include '../basic_php/connection.php' ; 
 
+<<<<<<< HEAD
 if (!isset($_SESSION['admin_id'])) {
     header("Location: ../regular/index.php");
     exit();
@@ -11,6 +12,8 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 
+=======
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 // Fetch all riders with user details
 $query = "
     SELECT concat(u.fname,' ',u.lname) AS full_name, u.image, u.phone, u.email, r.rider_active_status, r.pending_delivery
@@ -61,7 +64,10 @@ $riders = $stmt->fetch_all(MYSQLI_ASSOC);
     </main>
 
     <?php include '../basic_php/footer.php'; ?>
+<<<<<<< HEAD
     <?php include '../javascript_files/prevent_access.js'; ?>
+=======
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </body>
 
 </html>

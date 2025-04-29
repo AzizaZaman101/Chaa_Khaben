@@ -1,5 +1,9 @@
 <?php include '../basic_php/connection.php' ; ?>
+<<<<<<< HEAD
 <!DOCTYPE html> 
+=======
+<!DOCTYPE html>
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+<<<<<<< HEAD
 <body class=""> 
+=======
+<body class="">
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
     
 
 <!--This is the header/navigation bar section -->
@@ -44,7 +52,11 @@
                     <li><a href="./all-approved-orders.php"  id="history-btn"><i class="fa-solid fa-clock-rotate-left"></i>All Orders</a></li>
 
 
+<<<<<<< HEAD
                     <li><a href="./logout-admin.php" id="log-out-btn"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
+=======
+                    <li><a href="../regular/index.php" id="log-out-btn" onclick="register()"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
                 </ul>
             </div>
                     

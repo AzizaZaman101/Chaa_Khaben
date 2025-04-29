@@ -38,7 +38,11 @@
 
                     <li><a href="./rider_history.php"  id="history-btn" onclick="login()"><i class="fa-solid fa-clock-rotate-left"></i>History</a></li>
 
+<<<<<<< HEAD
                     <li><a href="./logout-rider.php" id="log-out-btn"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
+=======
+                    <li><a href="../regular/index.php" id="log-out-btn" onclick="register()"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
                 </ul>
             </div>
                     

@@ -1,5 +1,6 @@
 <?php
 include '../basic_php/connection.php' ; 
+<<<<<<< HEAD
 session_start();
  
 if (!isset($_SESSION['admin_id'])) {
@@ -11,6 +12,9 @@ if (!isset($_SESSION['admin_id'])) {
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
+=======
+
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
 $category_sql = "SELECT c.category_name, c.category_id, p.product_id, p.product_name 
                  FROM category c
@@ -158,7 +162,11 @@ $result = $conn->query($sql);
 
         </div>
     </div>
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
     <?php include '../basic_php/footer.php'; ?>
 
     <script src="../javascript_files/script.js"></script>
@@ -180,7 +188,10 @@ $result = $conn->query($sql);
         window.scrollTo(0, 0);
     }
 </script>
+<<<<<<< HEAD
 <?php include '../javascript_files/prevent_access.js'; ?>
+=======
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </body>
 
 </html>

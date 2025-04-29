@@ -6,10 +6,32 @@ $show_login_message = false;
 
 if (!isset($_SESSION['customer_id'])) {
     $show_login_message = true;
+<<<<<<< HEAD
 } 
 
 $total = 0;
 
+=======
+} else {
+
+$customer_id = $_SESSION['customer_id'];
+
+$sql = "
+    SELECT p.product_name, p.product_price, p.image, ci.qty, p.product_id
+    FROM cart c
+    JOIN cart_item ci ON c.cart_id = ci.cart_id
+    JOIN product p ON ci.product_id = p.product_id
+    WHERE c.customer_id = ?
+";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $customer_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$total = 0;
+}
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 ?>
 
 <!DOCTYPE html>
@@ -38,11 +60,44 @@ $total = 0;
         <div class="login-warning-div">
             <p class="login-warning">Please login first to see your Cart.</p>
         </div>
+<<<<<<< HEAD
+=======
+<?php elseif ($result->num_rows > 0): ?>
+
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Name</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Action</th>
+    </tr>
+    <?php while ($row = $result->fetch_assoc()): ?>
+        <tr>
+            <td>
+                <img src="<?= $row['image'] ?>" width="50">
+            </td>
+            <td><?= $row['product_name'] ?></td>
+            <td><?= $row['qty'] ?></td>
+            <td>৳<?= $row['product_price'] ?></td>
+            <td>৳<?= $row['qty'] * $row['product_price'] ?></td>
+            <td><a href="remove-from-cart.php?product_id=<?= $row['product_id'] ?>" class="details-btn">Remove</a></td>
+        </tr>
+        <?php $total += $row['qty'] * $row['product_price']; ?>
+    <?php endwhile; ?>
+</table>
+
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
 
 <div class="total-checkout">
     <h2>Total : ৳ <?= $total ?></h2>
+<<<<<<< HEAD
     <a href="./checkout.php" class="check_out">Proceed to Checkout</a>
+=======
+    <a href="./checkout-to-pay.php" class="check_out">Proceed to Checkout</a>
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </div>
 <?php endif; ?>
 

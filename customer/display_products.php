@@ -1,6 +1,10 @@
 <?php
 include '../basic_php/connection.php' ; 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 session_start();
 
 if (!isset($_SESSION['customer_id'])) {
@@ -225,7 +229,10 @@ function toggleWishlist(product_id) {
             console.error('Unexpected response:', data);
         }   
         
+<<<<<<< HEAD
         window.location.href = "./display_products.php";
+=======
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
     })
     .catch(error => console.error("Error:", error));
@@ -237,8 +244,19 @@ function toggleWishlist(product_id) {
         window.scrollTo(0, 0);
     }
 </script>
+<<<<<<< HEAD
 
 <?php include '../javascript_files/prevent_access.js'; ?>
+=======
+<script>
+    // Prevent back button from showing cached page
+    window.addEventListener('pageshow', function (event) {
+        if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+            window.location.href = "../regular/index.php";
+        }
+    });
+</script>
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </body>
 
 </html>

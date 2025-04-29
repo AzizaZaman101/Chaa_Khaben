@@ -109,7 +109,18 @@ $user = $result->fetch_assoc();
 
 
 <?php include '../basic_php/footer.php' ; ?>
+<<<<<<< HEAD
 <?php include '../javascript_files/prevent_access.js'; ?>
+=======
+<script>
+    // Prevent back button from showing cached page
+    window.addEventListener('pageshow', function (event) {
+        if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+            window.location.href = "../regular/index.php";
+        }
+    });
+</script>
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
     
 </body>
 </html>

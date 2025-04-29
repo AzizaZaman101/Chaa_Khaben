@@ -6,7 +6,10 @@ if (!isset($_SESSION['user_id'])) {
     die("Error: User not logged in.");
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 $user_id = $_SESSION['user_id'];
 $admin_id = $_SESSION['admin_id'];
 
