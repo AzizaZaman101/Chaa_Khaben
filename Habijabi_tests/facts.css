@@ -1,0 +1,69 @@
+/*News here*/
+
+.banner{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    
+}
+
+.news-final{
+    width: 60rem;
+    height: 20rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.news_header, .news_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.news-left{
+
+    width: auto;
+    height: 60vh;
+
+    background: pink;
+    padding: 2rem;
+    border-radius: 30px;
+    margin-bottom: 4.5rem;
+}
+
+
+.news-heading{
+    font-family: "Fira Sans", serif;
+    color: black;
+    opacity: 80%;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0rem;
+    margin-bottom: 2rem;
+}
+
+.description-news{
+    font-family: "Fira Sans", serif;
+    color: #0E0E0E;
+    opacity: 70%;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.news-img-all{
+    height: 20rem;
+    width: 24rem;
+    border-radius: 30px;
+}
+
+.facts-btn{
+    margin-top: 1rem;
+    background: transparent;
+    padding: 1rem 2rem;
+    border: 2px solid brown;
+    color: brown;
+}

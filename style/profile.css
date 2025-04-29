@@ -1,0 +1,220 @@
+:root{
+    --header_background: #f0ebd2;
+    --heading: rgba(22, 15, 2, 0.803);
+    --beige_color:  rgb(240, 235, 226);  
+    --brown_shade_light: rgba(195, 129, 22, 0.588);
+    --brown-shade_dark: rgba(198, 131, 8, 0.436);
+    --wave-color : rgba(22, 15, 2, 0.67);
+    --hover: rgba(22, 15, 2, 0.579);
+    --hover_card-btn: rgba(22, 15, 2, 0.84);
+    /*--logo_color:linear-gradient(45deg, #007bff, #ffffff 40%, #007bff);*/
+    --logo_color: rgba(101, 63, 2, 0.712);
+    --logo_font: Li Sirajee Sylheti Unicode;
+
+    --news_box: linear-gradient(
+        rgba(77, 49, 4, 0.095),
+        rgba(82, 52, 6, 0.137),    
+        rgba(207, 157, 76, 0.277));
+    --shadow: 4px 4px 10px rgba(77, 49, 4, 0.3), 
+    6px 6px 15px rgba(207, 157, 76, 0.25);
+    --box-shadow: 3px 3px 8px rgba(77, 49, 4, 0.4),  /* Soft deep shadow */
+    7px 7px 18px rgba(207, 157, 76, 0.3), /* Warm outer glow */
+    0px 0px 8px rgba(255, 200, 120, 0.25);
+}
+
+
+main{
+    margin:2rem;
+}
+
+
+.profile-container {
+    width: 40%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 3rem; 
+    background: var(--brown_shade_light);
+    box-shadow: var(--box-shadow);
+}
+.profile-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 3rem;
+    text-align:center;
+    background: var(--header_background);
+    color: var(--brown_shade_light);
+}
+
+ 
+
+#product_name,#description,#product_price,#stock_qty,
+#fname,#lname,#phone,#full_address,
+#email{
+    text-align:center;
+}
+
+#description {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical; /* Allows user to resize height if needed */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    white-space: pre-wrap; /* Ensures line breaks are respected */
+}
+
+.profile-field img{
+    width: 20%;
+    height: auto;
+    border-radius: 5rem;
+}
+
+.file-input{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    text-align: center;
+    gap:0.6rem;
+}
+
+.profile-field #image{
+    cursor: pointer;
+    font-size:0.6rem;
+    padding: 0 6.7rem;
+}
+
+.profile-field #image:hover{
+    color: var(--brown-shade_dark);
+    transform: scale(1.2);
+}
+
+
+
+
+
+.profile-field i{
+    color: var(--brown_shade_light);
+    padding: 0.9rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+
+.profile-field i:focus,
+.profile-field i:hover{
+    background: var(--hover);
+    color: var(--header_background);
+    transform: scale(1.3);
+}
+
+#upazila-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-field input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+}
+
+.save-btn {
+    display: none;
+    background-color: var(--brown-shade_dark);
+    color: var(--header_background);
+    box-shadow: var(--shadow);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+.save-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .profile-container {
+        width: 50%;
+        padding: 1.5rem;
+    }
+
+    .profile-field {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-field img {
+        width: 25%;
+        border-radius: 4rem;
+    }
+
+    .profile-field input {
+        font-size: 14px;
+    }
+
+    .save-btn {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-container {
+        width: 60%;
+        padding: 1.2rem;
+    }
+
+    .profile-field img {
+        width: 30%;
+    }
+
+    .profile-field input {
+        font-size: 14px;
+    }
+
+    .save-btn {
+        font-size: 0.85rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        margin: 1rem;
+    }
+
+    .profile-container {
+        width: 85%;
+        padding: 1rem;
+    }
+
+    .profile-field {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-field img {
+        width: 35%;
+        border-radius: 3rem;
+    }
+
+    .profile-field input {
+        font-size: 13px;
+    }
+
+    .save-btn {
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+}

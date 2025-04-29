@@ -1,0 +1,83 @@
+[
+
+    {
+        "pr_id": 1,
+        "pr_name": "Premium Tea Leaf",
+        "pr_price": 300,
+        "description": "Our premium tea leaves offer a rich, bold flavor with a smooth, aromatic finish, crafted for a perfect, invigorating brew.",
+        "image": "buy-ingredients/chaa_pata.jpg" ,
+        "stock_qty": 40,
+        "is_active": true,
+        "category_id": 1,
+        "category_name": "Buy Ingredients" 
+    },
+
+    {
+        "pr_id": 2,
+        "pr_name": "Earl Grey Tea Leaf",
+        "pr_price": 400,
+        "description": "A classic blend infused with citrusy bergamot for a refreshing, fragrant experience.",
+        "image": "buy-ingredients/earl_grey_tea.jpg" ,
+        "stock_qty": 10,
+        "is_active": true,
+        "category_id": 1,
+        "category_name": "Buy Ingredients" 
+    },   
+    
+    {
+        "pr_id": 3,
+        "pr_name": "Green Tea Leaf",
+        "pr_price": 350,
+        "description": "Light, fresh, and packed with antioxidants for a naturally soothing sip.",
+        "image": "buy-ingredients/green_tea.webp" ,
+        "stock_qty": 25,
+        "is_active": true,
+        "category_id": 1,
+        "category_name": "Buy Ingredients" 
+    },
+
+    {
+        "pr_id": 4,
+        "pr_name": "Hibiscus Tea Leaf",
+        "pr_price": 450,
+        "description": "Vibrantly tart and floral with a refreshing, tangy sweetness.",
+        "image": "buy-ingredients/hibiscus-tea.jpg" ,
+        "stock_qty": 8,
+        "is_active": true,
+        "category_id": 1,
+        "category_name": "Buy Ingredients" 
+    },
+    {
+        "pr_id": 5,
+        "pr_name": "Kashmiri Kahwa Tea Leaf",
+        "pr_price": 500,
+        "description": "A luxurious blend of green tea, saffron, and spices for a warm, aromatic delight.",
+        "image": "buy-ingredients/kashmiri_kahwa_tea.jpg" ,
+        "stock_qty": 8,
+        "is_active": true,
+        "category_id": 1,
+        "category_name": "Buy Ingredients" 
+    },
+
+
+
+
+
+
+
+
+    
+
+    {
+        "pr_id": 6,
+        "pr_name": "Premium Tea Leaf",
+        "pr_price": 300,
+        "description": "Our premium tea leaves offer a rich, bold flavor with a smooth, aromatic finish, crafted for a perfect, invigorating brew.",
+        "image": "buy-ingredients/chaa_pata.jpg" ,
+        "stock_qty": 40,
+        "is_active": true,
+        "category_id": 1,
+        "category_name": "Buy Ingredients" 
+    },
+
+]

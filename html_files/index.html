@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cha_Khaben</title>
+    <link rel="stylesheet" href="../style/styleIndex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="">
+    
+
+<!--This is the header/navigation bar section -->
+    <header class="header">
+        
+        <a class="logo"><i class="fa-solid fa-mug-hot"></i> চা খাবেন?</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="../php_files/display_products.php">Menu</a>
+            <a href="#gift_card">Gift card</a>
+            <a href="#orders">Orders</a>
+            <a href="#about_us">About Us</a>
+        </nav>
+        
+        <nav class="icons">
+            <form action="" class="search_form">
+                <input type="search" placeholder="Search here..." class="search_box">
+                <i class="fa fa-search" id="search_icon"></i>
+            </form>
+            <i id="menu-bars" class="fa-solid fa-bars"></i>
+
+            <div class="dropdown_user">
+                <i id="user" class="fa-solid fa-user"></i>
+                <ul class="dropdown">
+                    <li><a href="./login.html"  id="login-btn" onclick="login()">Login</a></li>
+                    <li><a href="./register.html" id="register-btn" onclick="register()">Register</a></li>
+                </ul>
+            </div>
+                    
+            <i class="fa-regular fa-heart"></i>
+
+            <div class="shopping">
+                <i id="shopping-cart" class="fa-solid fa-cart-shopping"></i>
+                <span class="quantity">0</span>
+            </div>
+        </nav>
+    </header>
+
+
+<!--This is the hero section/to show to the picture of the very first page featuring some heading tags and a button -->
+    <section class="hero">
+        <h1 class="main_headings">cholen cha khai</h1>
+        <button class="btn first-btn">Shop Now</button>
+        <h1 class="primary_headings">bhalo cha paoa jay</h1>
+    </section>
+
+<!--This is the banner section with some interesting fact about teas -->    
+    <section>
+        <p class="heading">Some Tea-rrific facts!</p>
+        <div class="banner">                 
+                <div class="news-left">
+                    <div class="news-img">
+                         <img class="news-img-all" src="../images/interface/tea_paycheck.png" alt="main" id="">
+                    </div>
+                    <div class="news-final">
+                        <p class="news-heading">Tea: The Original Paycheck!</p>
+                        
+                        <br>
+                        
+                        <p class="description-news">Long before banknotes, China was out here paying salaries in tea—yep, actual tea bricks! Back in the Tang Dynasty, tea was so valuable it bought you horses, silk, and probably some serious bragging rights. Imagine paying your rent in tea today—your landlord might just evict you for being too “historical.”</p>
+                        <button class="btn facts-btn">Read More</button>
+                    </div>
+                </div>
+
+                <div class="news-left">
+                    <div class="news-final">
+                        <p class="news-heading">Bangladesh Runs on Tea, Not Water!</p>
+                        
+                        <br>
+                       
+                        <p class="description-news">Who needs water when you have endless cups of cha? In Bangladesh, tea is practically a national fuel—found in villages, cities, and every cha-er dokan (tea stall) in between. Whether you like it black, milky, or spiced, tea is the real MVP, turning strangers into friends one sip at a time!</p>
+                        <button class="btn facts-btn">Read More</button>
+                    </div>
+                    <div class="news-img">
+                        <img class="news-img-all" src="../images/interface/tea1.webp" alt="main">
+                   </div>
+                </div>
+
+                <div class="news-left">
+                    <div class="news-img">
+                         <img class="news-img-all" src="../images/interface/tea1.webp" alt="main">
+                    </div>
+                    <div class="news-final">
+                        <p class="news-heading">Bangladesh’s Tea Can Wake the Dead</p>
+                        
+                        <br>
+                        
+                        <p class="description-news">Forget mild and subtle—Bangladeshi tea is strong enough to kickstart your soul. Sylhet and Srimangal teas are packed with flavor, color, and enough caffeine to make coffee jealous. Add condensed milk and sugar, and you’ve got a drink so thick and rich, it should probably be taxed!</p>
+                        <button class="btn facts-btn">Read More</button>
+                    </div>
+                </div>
+        </div>
+    </section>
+    
+<!--This is the category section -->   
+    <main class="products" id="products">
+        <h1 class="heading">Explore Our Menu</h1>
+
+        <div class="box_container">
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="../images/buy-ingredients/chaa_pata.jpg" alt="Buy Our Ingredients" class="card_image">
+                <a href="#" class="card_btn">Buy Ingredients</a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="../images/tea/karak_chai.jpg" alt="Buy Our Ingredients" class="card_image">
+                <a href="#" class="card_btn">Tea</a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="../images/tea/karak_chai.jpg" alt="Buy Our Ingredients" class="card_image">
+                <a href="#" class="card_btn">Coffee</a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="../images/buy-ingredients/chaa_pata.jpg" alt="Buy Our Ingredients" class="card_image">
+                <a href="#" class="card_btn">Biscuits</a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="../images/snacks/shingara.jpeg" alt="Buy Our Ingredients" class="card_image">
+                <a href="#" class="card_btn">Snacks</a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="../images/high-tea/high_tea.jpg" alt="Buy Our Ingredients" class="card_image">
+                <a href="#" class="card_btn">High Tea</a>
+            </div>
+
+        </div>
+    </main>
+
+<!--This is the main all items section where you can access all the items based on their category, in details -->
+    <div class="list"></div>    
+
+<!--This is the add to cart section -->
+<section class="cart-container">
+    <h1 class="cart_heading">Cart</h1>
+    <ul class="list-cart"></ul>
+
+    <div class="total-container">
+    <p class="total">Total :</p>
+    <p class="total">0 BDT</p>
+    </div>
+
+    <div class="checkout-container">
+        <div href="cart.php" class="view-cart">View cart</div>
+        <div href="checkout.php" class="checkout">Checkout</div>
+    </div>
+</section>
+
+<!--This is the About us/Why choose us section -->    
+    <section class="about_us" id="about_us">
+        <h1 class="heading">About Us</h1>
+
+            <div class="about_image">
+                <img src="../images/interface/about_us.jpg" alt="Our tea shop" class="about_us_image">
+
+                <img src="../images/interface/cafe.jpg" alt="Our tea shop" class="about_us_image">
+
+                <img src="../images/interface/cozy_cafe.jpg" alt="Our tea shop" class="about_us_image">
+
+            </div> 
+
+            <div class="content">
+                <h3 class="sub_heading"></h3>
+                <p class="description-news">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati pariatur quisquam soluta veritatis culpa dignissimos. Earum deserunt asperiores ea molestiae vitae esse, pariatur cupiditate velit adipisci ipsa rem autem consectetur facere. Officia perspiciatis illum, repellendus earum quae veniam! Rem, exercitationem magni temporibus recusandae esse alias sit sed impedit assumenda quis culpa inventore, corporis possimus ratione. Nisi alias maxime ut iure explicabo, voluptates, quasi totam enim praesentium mollitia expedita. Quia voluptatibus provident tempora! Dolor non nulla quam! Iure reprehenderit distinctio, blanditiis illum neque aspernatur saepe magnam ab voluptatem ducimus voluptatibus totam excepturi vel minima hic cum, eveniet eum doloribus corporis numquam?</p>
+
+                <div class="icon_container">
+                    <div class="icons">
+                        <i class="fa-solid fa-person-biking"></i>
+                        <span>Fast Delivery</span>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <span>Easy Payments</span>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>24/7 Service</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center">
+                    <a href="#" class="content_btn">Learn More</a>
+                </div>
+
+                
+            </div>
+    </section>
+
+
+
+<!--This is the Footer section -->   
+    <footer>
+
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        
+        <div class="footer_content">
+            <div class="footer_about-us">
+                <p class="about_us_heading">About Us</p>
+                <p class="description-news">Cha Kahben offers premium tea, coffee, biscuits, high-tea, and snacks made from the finest ingredients. Experience authentic flavors!
+                </p>
+            </div>
+
+            <div class="follow_us">
+                <p class="about_us_heading">Follow us</p>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>        
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </div>
+            </div>
+
+            
+
+            <div class="contact" id="contact">
+                <p class="about_us_heading">Contact Us</p>
+                <div class="contact_sort">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="description-news">From 6.00 am to 1.00 am</p>
+                </div>
+                <div class="contact_sort">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="description-news">8 No. North Mugdapara, Dhaka-1214</p>
+                </div>
+                <div class="contact_sort">
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="description-news">01994457580</p>
+                </div>
+                <div class="contact_sort">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="description-news">aziza1@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyRight">
+            <p class="copy_right"><i class="fa-regular fa-copyright"></i>2025 || Cha Khaben.All Rights Reserved.</p>
+        </div>
+        
+
+        
+    </footer>
+    
+
+
+<!-- -->
+    <script src="../javascript_files/script.js"></script>
+    <script src="../javascript_files/add_to_cart.js"></script>
+
+</body>
+</html>
