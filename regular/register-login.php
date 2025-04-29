@@ -212,6 +212,13 @@ try {
 }
 
 }
+else{
+    echo "<script>
+                    alert('Password Doesn't Match!');
+                    window.location.href = './register-login.php';
+                        </script>";
+                    exit();
+}
     }
 }
 
