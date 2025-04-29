@@ -1,7 +1,6 @@
 <?php
 include '../basic_php/connection.php';
 
-<<<<<<< HEAD
 session_start(); 
 
 
@@ -15,16 +14,6 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
 
-=======
-session_start();
-echo "Session ID: " . session_id() . "<br>";
-echo "Admin ID: " . ($_SESSION['admin_id'] ?? 'Not Set');
-
-if (!isset($_SESSION['admin_id'])) {
-    die("Error: User not logged in.");
-}
-
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 $admin_id = $_SESSION['admin_id'];
 $product_id = $_GET['product_id'] ?? null;
 
@@ -153,11 +142,7 @@ $product = $result->fetch_assoc();
     }
 </script>
 
-<<<<<<< HEAD
-<?php include '../javascript_files/prevent_access.js'; ?>
-=======
-
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
+<script src="../javascript_files/script.js"></script>
     
 </body>
 </html>

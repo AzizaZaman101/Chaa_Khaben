@@ -2,7 +2,6 @@
 include '../basic_php/connection.php';
 session_start();
 
-<<<<<<< HEAD
 if (!isset($_SESSION['customer_id'])) {
     header("Location: ../regular/index.php");
     exit();
@@ -12,13 +11,6 @@ if (!isset($_SESSION['customer_id'])) {
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
-=======
-
-// Ensure only customers can view this page
-if (!isset($_SESSION['customer_id'])) {
-    die("Error: Unauthorized Access");
-}
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
 $customer_id = $_SESSION['customer_id'];
 
@@ -172,17 +164,6 @@ if ($result->num_rows == 0) {
 </main>
 
 <?php include'../basic_php/footer.php';?>
-<<<<<<< HEAD
-<?php include '../javascript_files/prevent_access.js'; ?>
-=======
-<script>
-    // Prevent back button from showing cached page
-    window.addEventListener('pageshow', function (event) {
-        if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
-            window.location.href = "../regular/index.php";
-        }
-    });
-</script>
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
+<script src="../javascript_files/script.js"></script>
 </body>
 </html>

@@ -2,7 +2,6 @@
 include '../basic_php/connection.php';
 
 session_start();
-<<<<<<< HEAD
  
 if (!isset($_SESSION['admin_id'])) {
     header("Location: ../regular/index.php");
@@ -13,12 +12,6 @@ if (!isset($_SESSION['admin_id'])) {
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
-=======
-
-if (!isset($_SESSION['admin_id'])) {
-    die("Error: User not logged in.");
-}
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
 $admin_id = $_SESSION['admin_id'];
 
@@ -115,10 +108,7 @@ $user = $result->fetch_assoc();
     }
 </script>
 
-<<<<<<< HEAD
-<?php include '../javascript_files/prevent_access.js'; ?>
-=======
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
+<script src="../javascript_files/script.js"></script>
     
 </body>
 </html>

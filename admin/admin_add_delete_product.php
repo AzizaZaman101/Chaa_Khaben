@@ -2,7 +2,6 @@
 include '../basic_php/connection.php' ; 
 
 session_start();
-<<<<<<< HEAD
 
 if (!isset($_SESSION['admin_id'])) {
     header("Location: ../regular/index.php");
@@ -15,8 +14,6 @@ header("Pragma: no-cache");
 header("Expires: 0");
  
 
-=======
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 $admin_id = $_SESSION['admin_id']; 
 
 // Fetch categories for dropdown
@@ -29,15 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_product'])) {
     $product_name = $_POST['product_name'];
     $product_price = $_POST['product_price'];
     $description = $_POST['description'];
-<<<<<<< HEAD
-=======
-    $image = $_POST['image'];
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
     $stock_qty = $_POST['stock_qty'];
     $active_status = $_POST['active_status'];
     $category_name = $_POST['category_name'];
 
-<<<<<<< HEAD
         if (!empty($_FILES['image']['name'])) {
             $image_name = basename($_FILES['image']['name']);
             $image_tmp = $_FILES['image']['tmp_name'];
@@ -68,8 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_product'])) {
 
 
 
-=======
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
     // Get category_id from category_name
     $stmt = $conn->prepare("SELECT category_id FROM category WHERE category_name = ?");
     $stmt->bind_param("s", $category_name);
@@ -83,11 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_product'])) {
         
     $timestamp = date('Y-m-d H:i:s');
 
-<<<<<<< HEAD
      
-=======
-    
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
     $sql = "INSERT INTO product (product_name, product_price, description, image, stock_qty, active_status, category_id) 
             VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -103,13 +89,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_product'])) {
     $stmt->execute();
     $stmt->close();
 
-<<<<<<< HEAD
     echo "<script>alert('Product added successfully!');
     window.location.href='./admin_add_delete_product.php';
     </script>";
-=======
-    echo "Product added successfully!";
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 }
 
 
@@ -117,11 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_product'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_product'])) {
 
     $product_id = $_POST['product_id'];
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
     // Fetch the product details before deletion for audit
     $stmt = $conn->prepare("SELECT * FROM product WHERE product_id = ?");
     $stmt->bind_param("i", $product_id);
@@ -145,13 +123,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_product'])) {
     $stmt->bind_param("i", $product_id);
     $stmt->execute();
     
-<<<<<<< HEAD
     echo "<script>alert('Product deleted successfully!');
     window.location.href='./admin_add_delete_product.php';
     </script>";
-=======
-    echo "Product deleted successfully!";
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 }
 ?>
 
@@ -267,10 +241,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_product'])) {
 
 
     <?php include '../basic_php/footer.php'; ?>
-<<<<<<< HEAD
     <script src="../javascript_files/prevent_access.js"></script>
-=======
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </body>
 
 </html>

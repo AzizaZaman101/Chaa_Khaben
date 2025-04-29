@@ -14,15 +14,6 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
 
-<<<<<<< HEAD
-=======
-// Ensure the user is logged in
-if (!isset($_SESSION['customer_id'])) {
-    http_response_code(401); // Unauthorized
-    echo "Error: User not logged in.";
-    exit;
-}
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
 $customer_id = $_SESSION['customer_id'];
 

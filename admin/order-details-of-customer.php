@@ -4,7 +4,6 @@ session_start();
 
 // Ensure only admins can view this page
 if (!isset($_SESSION['admin_id'])) {
-<<<<<<< HEAD
     header("Location: ../regular/index.php");
     exit();
 } 
@@ -13,10 +12,6 @@ if (!isset($_SESSION['admin_id'])) {
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
-=======
-    die("Error: Unauthorized Access");
-}
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
  
 $admin_id = $_SESSION['admin_id'];
 
@@ -139,9 +134,6 @@ $order_info = $order_result->fetch_assoc();
 </main>
 
 <?php include '../basic_php/footer.php'; ?>
-<<<<<<< HEAD
-<?php include '../javascript_files/prevent_access.js'; ?>
-=======
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
+<script src="../javascript_files/script.js"></script>
 </body>
 </html>

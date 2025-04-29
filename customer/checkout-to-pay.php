@@ -2,12 +2,6 @@
 include '../basic_php/connection.php';
 session_start();
 
-<<<<<<< HEAD
-=======
-
-session_start();
-
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 if (!isset($_SESSION['customer_id'])) {
     header("Location: ../regular/index.php");
     exit();
@@ -19,21 +13,10 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 if (!isset($_SESSION['user_id'])) {
-<<<<<<< HEAD
     echo "Something went wrong!";
     exit;
 }
 
-=======
-    echo "Something went!";
-    exit;
-}
-
-if (!isset($_SESSION['customer_id'])) {
-    echo "Login required.";
-    exit;
-}
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
 $user_id = $_SESSION['user_id'];
 $customer_id = $_SESSION['customer_id'];
@@ -113,7 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay_now'])) {
     $rider_result = $rider_stmt->get_result();
     $rider_row = $rider_result->fetch_assoc();
 
-<<<<<<< HEAD
 
     $tracking_number = 'CHA' . date("YmdHis") . rand(100, 999);
 
@@ -121,16 +103,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay_now'])) {
 
 
     if (!$rider_row){
-=======
-    $rider_id = $rider_row ? $rider_row['rider_id'] : null;
-
-    $tracking_number = 'CHA' . date("YmdHis") . rand(100, 999);
-
-
-
-
-    if ($rider_id == null){
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
         // Step 6: Warn if no rider was found
         echo "<script>alert('⚠️ No available rider found in the customer\'s upazila.');
         window.location.href = './checkout-to-pay.php';
@@ -140,17 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay_now'])) {
 
    
 
-<<<<<<< HEAD
     else {
-=======
-    if ($rider_id !== null) {
-        $update_rider_sql = "UPDATE rider SET pending_delivery = pending_delivery + 1 WHERE rider_id = ?";
-        $update_stmt = $conn->prepare($update_rider_sql);
-        $update_stmt->bind_param("i", $rider_id);
-        $update_stmt->execute();
-   
-
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
         // Insert into orders
         $order_sql = "INSERT INTO orders (order_date, total_amount, customer_id, delivery_charge) VALUES (NOW(), ?, ?, ?)";
@@ -159,17 +121,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay_now'])) {
         $stmt->execute();
         $order_id = $stmt->insert_id;
 
-<<<<<<< HEAD
         //$delivery_sql = "INSERT INTO delivery (delivery_status, order_id, rider_id, tracking_number) VALUES ('Pending', ?, ?, ?)";
 
         $delivery_sql = "INSERT INTO delivery (delivery_status, order_id, tracking_number) VALUES ('Pending', ?, ?)";
         $stmt = $conn->prepare($delivery_sql);
         $stmt->bind_param("is", $order_id, $tracking_number);
-=======
-        $delivery_sql = "INSERT INTO delivery (delivery_status, order_id, rider_id, tracking_number) VALUES ('Pending', ?, ?, ?)";
-        $stmt = $conn->prepare($delivery_sql);
-        $stmt->bind_param("iis", $order_id, $rider_id, $tracking_number);
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
         $stmt->execute();
     
         // Insert into payment
@@ -329,20 +285,7 @@ $customer = $stmt->get_result()->fetch_assoc();
 
 </main>
 <?php include '../basic_php/footer.php'; ?>
-<<<<<<< HEAD
-<?php include '../javascript_files/prevent_access.js'; ?>
+<script src="../javascript_files/script.js"></script>
 </body>
 </html>
  
-=======
-<script>
-    // Prevent back button from showing cached page
-    window.addEventListener('pageshow', function (event) {
-        if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
-            window.location.href = "../regular/index.php";
-        }
-    });
-</script>
-</body>
-</html>
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0

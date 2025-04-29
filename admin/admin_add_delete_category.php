@@ -1,7 +1,6 @@
 <?php 
 include '../basic_php/connection.php' ; 
 
-<<<<<<< HEAD
 session_start();
 
 if (!isset($_SESSION['admin_id'])) {
@@ -15,8 +14,6 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 
-=======
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 // Fetch categories for display
 $categoryQuery = "SELECT category_id, category_name, category_image FROM category";
 $categoryStmt = $conn->query($categoryQuery);
@@ -25,7 +22,6 @@ $categories = $categoryStmt->fetch_all(MYSQLI_ASSOC); // Fetch all categories
 // Handle category addition
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_category'])) {
     $category_name = trim($_POST['category_name']);
-<<<<<<< HEAD
     //$category_image = trim($_POST['category_image']);
 
     if (!empty($_FILES['category_image']['name'])) {
@@ -54,9 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_category'])) {
         }
         $category_image = $target_file; // Update the image path
     }
-=======
-    $category_image = trim($_POST['category_image']);
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 
     if (empty($category_name) || empty($category_image)) {
         echo "<script>alert('Category name and image are required!'); window.location.href='./admin_add_delete_category.php';</script>";
@@ -147,11 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_category'])) {
     <h1>Add New Category</h1>
 
     <section class="add-category-form">
-<<<<<<< HEAD
         <form method="POST" enctype="multipart/form-data">
-=======
-        <form method="POST">
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
             <input type="text" name="category_name" placeholder="Category Name" required>
             <input type="file" name="category_image" placeholder="Category Image" required>
             <button type="submit" name="add_category">Add Category</button>
@@ -191,9 +180,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_category'])) {
 </main>
 
     <?php include '../basic_php/footer.php'; ?>
-<<<<<<< HEAD
     <script src="../javascript_files/prevent_access.js"></script>
-=======
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </body>
 </html>

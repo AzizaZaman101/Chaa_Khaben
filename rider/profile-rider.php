@@ -5,7 +5,6 @@ session_start();
 
 
 if (!isset($_SESSION['rider_id'])) {
-<<<<<<< HEAD
     header("Location: ../regular/index.php");
     exit();
 }
@@ -15,11 +14,6 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
 
-=======
-    die("Error: User not logged in.");
-}
-
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 $rider_id = $_SESSION['rider_id'];
 
 // Fetch user details except password and user_type
@@ -214,10 +208,6 @@ $upazilas = $conn->query($upazilaQuery);
 
 
 
-<<<<<<< HEAD
-<?php include '../javascript_files/prevent_access.js'; ?>
-=======
-    
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
+<script src="../javascript_files/script.js"></script>
 </body>
 </html>

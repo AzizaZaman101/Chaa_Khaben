@@ -53,7 +53,7 @@ while ($item = $items_result->fetch_assoc()) {
 
 
 
-// Optional: clear cart items
+// clear cart items
 $cartIdQuery = "SELECT cart_id FROM cart WHERE customer_id = ?";
 $stmt = $conn->prepare($cartIdQuery);
 $stmt->bind_param("i", $customer_id);

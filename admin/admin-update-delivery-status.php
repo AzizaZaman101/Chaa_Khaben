@@ -8,18 +8,13 @@ $delivery_status = $_POST['delivery_status'];
 $admin_id = $_POST['admin_id'];
 
 // If the status is being changed to "shipped", update the status and admin_id
-<<<<<<< HEAD
 
 if ($delivery_status == 'shipped') {
     
-=======
-if ($delivery_status == 'shipped') {
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
     // Update the delivery status and admin ID in the database
     $sql = "UPDATE delivery SET delivery_status = ?, admin_id = ? WHERE delivery_id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sii", $delivery_status, $admin_id, $delivery_id);
-<<<<<<< HEAD
 
     $order_sql = "SELECT order_id FROM delivery WHERE delivery_id = ?";
     $order_stmt = $conn->prepare($order_sql);
@@ -83,15 +78,6 @@ if ($delivery_status == 'shipped') {
         // No rider found
         header("Location: ./orders-admin.php?status=no_rider");
         exit;
-=======
-    
-    if ($stmt->execute()) {
-        // Successfully updated
-        header("Location: ./orders-admin.php?status=success");
-    } else {
-        // Error updating
-        header("Location: ./orders-admin.php?status=failed");
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
     }
 }
 ?>

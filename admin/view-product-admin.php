@@ -2,7 +2,6 @@
 include '../basic_php/connection.php' ; 
 
 session_start();
-<<<<<<< HEAD
 
 
 if (!isset($_SESSION['admin_id'])) {
@@ -15,8 +14,6 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
 header("Expires: 0");
 
-=======
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 $admin_id = $_SESSION['admin_id'];
 
 if (!isset($_GET['product_id'])) {
@@ -55,13 +52,6 @@ $related_stmt->bind_param("ii", $category_id, $product_id);
 $related_stmt->execute();
 $related_result = $related_stmt->get_result();
 
-<<<<<<< HEAD
-
-=======
-if ($related_result->num_rows === 0) {
-    echo "<p>No related products found in the same category.</p>";
-}
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 ?>
 
 
@@ -126,10 +116,7 @@ if ($related_result->num_rows === 0) {
     </main>
 
     <?php include '../basic_php/footer.php'; ?>
-<<<<<<< HEAD
     <script src="../javascript_files/prevent_access.js"></script>
-=======
->>>>>>> 780c424c29be69a08dd98158bfd6fc4337eeaff0
 </body>
 
 </html>
