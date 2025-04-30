@@ -102,13 +102,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $otp = rand(100000, 999999);
             $_SESSION['otp'] = $otp;
 
-    
-            // Insert new OTP into the database
-            $insert_otp_query = "INSERT INTO double_verification (user_id, otp) VALUES (?, ?)";
+            date_default_timezone_set('Asia/Dhaka');
+            $expired_at = date("Y-m-d H:i:s", strtotime('+5 minutes'));
+
+            // Insert OTP into double_verification table
+            $insert_otp_query = "INSERT INTO double_verification (user_id, otp,expired_at) VALUES (?, ?, ?)";
             $stmt = $conn->prepare($insert_otp_query);
-            $stmt->bind_param("iss", $_SESSION['user_id'], $otp);
+            $stmt->bind_param("iss", $_SESSION['user_id'], $otp, $expired_at);
             $stmt->execute();
+
     
+
             // Send the OTP via email
             $Mail = new PHPMailer(true);
 
