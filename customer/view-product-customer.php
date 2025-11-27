@@ -87,7 +87,7 @@ $related_result = $related_stmt->get_result();
             </nav>
 
             
-             
+              
 <div class="product-container">
             
     <div class="product-main">
@@ -97,10 +97,20 @@ $related_result = $related_stmt->get_result();
         <p><strong>Description:</strong> <?php echo htmlspecialchars($product['description']); ?></p>
     </div>
 
-    <a href="#" id="add-to-cart" class="add-to-cart" onclick="addToCart(<?= $product['product_id'] ?>, 
-                        `<?= htmlspecialchars($product['product_name'], ENT_QUOTES) ?>`, 
-                        <?= $product['product_price'] ?>, 
-                        `<?= htmlspecialchars($product['image'], ENT_QUOTES) ?>`)">Add To Cart</a>
+    
+<?php if ($product['stock_qty'] == 0): ?>
+    <a href="#" class="add-to-cart" style="cursor: not-allowed;">Add to Cart</a>
+<?php else: ?>
+    <a href="#" class="add-to-cart"
+       onclick="addToCart(
+           <?= $product['product_id'] ?>,
+           '<?= htmlspecialchars($product['product_name'], ENT_QUOTES) ?>',
+           <?= $product['product_price'] ?>,
+           '<?= htmlspecialchars($product['image'], ENT_QUOTES) ?>',
+           <?= $product['stock_qty'] ?>,
+       )">Add to Cart</a>
+<?php endif; ?>
+
 
 <?php if ($related_result->num_rows === 0) {
     echo "<p><strong>No related products found in the same category.</strong></p>";

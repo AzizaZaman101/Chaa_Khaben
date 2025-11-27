@@ -33,9 +33,7 @@ $stmt->bind_param("i",$customer_id);
 $stmt->execute();
 $result_rider = $stmt->get_result();
 
-if ($result_rider->num_rows == 0) {
-    echo "<p>No pending orders found.</p>";
-}
+
 
 // Create a rider mapping indexed by delivery_id
 $rider_map = [];
@@ -76,9 +74,6 @@ $stmt->bind_param("i",$customer_id);
 $stmt->execute();
 $result = $stmt->get_result();
 
-if ($result->num_rows == 0) {
-    echo "<p>No pending orders found.</p>";
-}
 ?>
 
 <!DOCTYPE html>
@@ -120,6 +115,13 @@ if ($result->num_rows == 0) {
                     </tr>
                 </thead>
                 <tbody>
+                    <?php if ($result->num_rows == 0): ?>
+                        <tr>
+                            <td colspan="8" style="text-align:center; padding:20px;">
+                                            No pending orders found.
+                            </td>
+                        </tr>
+                    <?php else: ?>
                 <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
                 
@@ -155,10 +157,10 @@ if ($result->num_rows == 0) {
                         <a href="order-details.php?order_id=<?php echo $row['order_id']; ?>" class="details-button">See Details</a>
                     </td>
 
-               
 
             </tr>
             <?php endwhile; ?>
+            <?php endif; ?>
         </tbody>
     </table>
 </main>

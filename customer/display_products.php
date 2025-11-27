@@ -148,7 +148,7 @@ include './header_customer.php';?>
 
                         <i id="wish-list-<?php echo $row['product_id']; ?>" class="fa-solid fa-heart <?php echo isProductInWishlist($row['product_id']) ? 'wishlist-added' : ''; ?>" onclick="toggleWishlist(<?= $row['product_id'] ?>)"></i>
   
-
+ 
 
                         <?php if ($row['stock_qty'] == 0): ?>
                             <i class="fa-solid fa-cart-plus" style="color: grey; cursor: not-allowed;" 

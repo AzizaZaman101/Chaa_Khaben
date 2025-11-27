@@ -114,20 +114,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
             // Send the OTP via email
-            $Mail = new PHPMailer(true);
+            $Mail = new PHPMailer(true); 
 
+            //here make sure to put your email and app password in order to use the double verification feature
             try {
                 // Server settings
                 $Mail->isSMTP();                                      
                 $Mail->Host       = 'smtp.gmail.com';                 
                 $Mail->SMTPAuth   = true;                             
                 $Mail->Username   = 'zamanaziza5@gmail.com';            
-                $Mail->Password   = 'tggjlujxdguxiusy';        
+                $Mail->Password   = '';        
                 $Mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;   
                 $Mail->Port       = 587;                              
             
                 // Recipients
-                $Mail->setFrom('zamanaziza5@gmail.com', 'Aziza Zaman');
+                $Mail->setFrom('zamanaziza5@gmail.com', 'Chaa Khaben');
                 $Mail->addAddress($email);
             
                 $Mail->isHTML(true);
